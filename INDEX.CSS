@@ -1,0 +1,185 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('image.jpg');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -20;
+}
+.main::after{
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -19;
+}
+
+.block{
+    position: absolute;
+    top: 240px;
+    left: -400px;
+    height: 130px;
+    width: 400px;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(0, 255, 85);
+    animation: block_anime 5s;
+}
+.Pyear{
+    transform: translate(150%, 220%);
+    display: inline-block;
+    color: white;
+    visibility: hidden;
+    font-size: 6em;
+    margin-left: -200px;
+    animation: year_anime 2s;
+}
+
+@keyframes block_anime{
+    0%{
+        left: -400px;
+    }
+    25%{
+        left: 800px;
+    }
+    50%{
+        left: 700px;
+    }
+    75%{
+        left: 800px;
+    }
+    100%{
+        left: -400px;
+    }
+
+
+}
+
+@keyframes year_anime{
+    0%{
+        margin-left: -200px;
+        visibility: visible;
+    }
+    100%{
+        margin-left: 280px;
+    }
+}
+
+.Nyear{
+    position: relative;
+    transform: translate(150%, 220%);
+    display: inline-block;
+    color: white;
+    visibility: hidden;
+    font-size: 6em;
+    margin-left: 280px;
+    animation: Nyear_anime 345600s linear 2s;
+}
+
+@keyframes Nyear_anime{
+    0%{
+        visibility: hidden;
+    }
+    0.002%{
+        top: -200px;
+    }
+    100%{
+        top: -200px;
+        visibility: visible;
+    }
+}
+
+
+
+
+
+.timer{
+    visibility: hidden;
+    height: 150px;
+    width: 600px;
+    padding: 10px;
+    transform: translate(60%,70%);
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: -22;
+    animation: timer_anime 2s linear 6s;
+    animation-iteration-count: infinite;
+}
+
+.time{
+    height: 90%;
+    width: 20%;
+    color: white;
+    background-color: rgb(0, 255, 85, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.time h3{
+    font-size: 3em;
+}
+
+@keyframes timer_anime{
+    50%{
+        visibility: visible;
+    }
+    100%{
+        visibility: visible;
+    }
+}
+
+
+#myVideo{
+    position: absolute;
+    top: 30px;
+    left: 160px;
+    padding: 0px;
+    z-index: -25;
+}
+
+
+.para{
+    color: white;
+    position: absolute;
+    top: 400px;
+    left: 440px;
+    font-size: 2em;
+    visibility: hidden;
+    animation: timer_anime 2s linear 6s;
+    animation-iteration-count: infinite;
+}
+.para2{
+    color: white;
+    position: absolute;
+    top: 460px;
+    left: 440px;
+    font-size: 2em;
+    visibility: hidden;
+    animation: timer_anime 2s linear 6s;
+    animation-iteration-count: infinite;
+}
+
+audio{
+    position: absolute;
+    top: 500px;
+    left: 440px;
+}
+
+
+

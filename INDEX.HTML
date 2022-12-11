@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="INDEX.CSS">
+</head>
+<body>
+     <video id="myVideo" height="500px width="auto">
+      <source src=https://player.vimeo.com/external/372034049.sd.mp4?s=e24fceae4312d64c2954b9931c3d17e7eb546e0b&profile_id=139&oauth2_token_id=57447761" type="video/ogg">
+      <source>
+    </video>
+    
+    <div class="main"></div>
+    <div class="Pyear">
+        <span>2022</span>
+    </div>
+    <div class="Nyear">
+        <span>2023</span>
+    </div>
+    <div class="block">Xush kelibsan!</div>
+
+    <div class="timer">
+        <div class="time">
+            <h3 id="Days"></h3>
+            <h2>Kunlar</h2>
+        </div>
+        <div class="time">
+            <h3 id="Hours"></h3>
+            <h2">Soatlar</h2>
+        </div>
+        <div class="time">
+            <h3 id="Minutes"></h3>
+            <h2">Daqiqalar</h2>
+        </div>
+        <div class="time">
+            <h3 id="Seconds"></h3>
+            <h2">Soniyalar</h2>
+        </div>
+    </div>
+    <audio src="BoneyM-JingleBells.mp3" autoplay="autoplay" controls style="text-align:center ; align-items: center; justify-items: center; justify-content: center;"></audio>
+    <p class="para">Behruz Eshpo'latov Mahsuloti</p>
+    <p class="para2">2022 yil bilan xayrlashish uchun...</p>
+    <br>
+    <br>
+    
+
+</body>
+<script>
+
+var countDownDate = new Date("Jan 1, 2023 00:00:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("Days").innerHTML = days;
+  document.getElementById("Hours").innerHTML = hours;
+  document.getElementById("Minutes").innerHTML = minutes;
+  document.getElementById("Seconds").innerHTML = seconds;
+
+  
+  if(distance < 0){
+    var vid = document.getElementById("myVideo"); 
+    vid.style.zIndex = '20';
+    function playVid() { 
+    vid.play(); 
+    } 
+    playVid();
+}
+  
+}, 1000);
+
+</script>
+</html>
